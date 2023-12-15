@@ -1,0 +1,22 @@
+dateModified: 1702640561
+email:
+  fromEmail: r1007021@student.thomasmore.be
+  fromName: FurnDeco
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    5b26135c-d2b4-4311-8214-eb3535d9e521: FurnDeco # FurnDeco
+    e92e414f-7845-449e-8125-dad30e6a44a3: Common # Common
+    f8d9a7b1-d152-4891-b80e-8f3af70f868b: FurnDeco # FurnDeco
+system:
+  edition: solo
+  live: true
+  name: FurnDeco
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
