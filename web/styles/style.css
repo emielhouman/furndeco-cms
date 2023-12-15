@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "DM Serif Display";
+    src: url('@web/fonts/DMSerifDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url('@web/fonts/DMSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+body{
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "DM Serif Display", serif;
+    padding: 2rem 2.5rem;
+    background-color: whitesmoke;
+}
+
+.logo {
+    font-size: 3rem;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 32rem;
+}
+
+.menu__item {
+    font-size: 1.25rem;
+}
+
+.menu__item--link {
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+}
