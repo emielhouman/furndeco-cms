@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{craft.app.language}}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{siteName}}</title>
-    {# CSS links #}
+    {% do craft.app.view.registerCssFile('@web/styles/reset.css') %}
+    {% do craft.app.view.registerCssFile('@web/styles/style.css') %}
 </head>
 <body>
     <header>
-      <nav>
-        <ul id="navigation__menu">
-          <li><a href="{{siteUrl}}">Home</a></li>
-          <li><a href="{{siteUrl}}about">About</a></li>
-          <li><a href="{{siteUrl}}products">Products</a></li>
-          <li><a href="{{siteUrl}}favourites">Favourites</a></li>
+      <nav class="navigation">
+        <div>
+          <a class="logo" href="{{siteUrl}}">FurnDeco</a>
+        </div>
+        <ul class="navigation__menu">
+          <li class="menu__item"><a class="menu__item--link" href="{{siteUrl}}">Home</a></li>
+          <li class="menu__item"><a class="menu__item--link" href="{{siteUrl}}about">About</a></li>
+          <li class="menu__item"><a class="menu__item--link" href="{{siteUrl}}products">Products</a></li>
+          <li class="menu__item"><a class="menu__item--link" href="{{siteUrl}}favourites">Favourites</a></li>
         </ul>
       </nav>
     </header>
