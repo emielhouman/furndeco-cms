@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{craft.app.language}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{siteName}}</title>
+    {# CSS links #}
+</head>
+<body>
+    <header>
+      <nav>
+        <ul id="navigation__menu">
+          <li><a href="{{siteUrl}}">Home</a></li>
+          <li><a href="{{siteUrl}}about">About</a></li>
+          <li><a href="{{siteUrl}}products">Products</a></li>
+          <li><a href="{{siteUrl}}favourites">Favourites</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <p>This is the footer.</p>
+    </footer>
+</body>
+</html>
