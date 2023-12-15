@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: categories
+name: Categories
+propagationMethod: all
+siteSettings:
+  f8d9a7b1-d152-4891-b80e-8f3af70f868b: # FurnDeco
+    enabledByDefault: true
+    hasUrls: true
+    template: categories/_entry
+    uriFormat: 'categories/{slug}'
+type: channel

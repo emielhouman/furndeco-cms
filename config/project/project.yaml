@@ -1,4 +1,4 @@
-dateModified: 1702640561
+dateModified: 1702641282
 email:
   fromEmail: r1007021@student.thomasmore.be
   fromName: FurnDeco
@@ -6,6 +6,14 @@ email:
 meta:
   __names__:
     5b26135c-d2b4-4311-8214-eb3535d9e521: FurnDeco # FurnDeco
+    5575eddd-47fe-42b6-be90-7b8b19e89fe2: Default # Default
+    b8bcf4ef-f467-4195-8da0-d42ba9139777: Products # Products
+    b94ad166-e8e8-45cb-9d11-0c58278fe6e6: Categories # Categories
+    ba770963-12cf-4e44-9433-241e32e64624: Default # Default
+    bea7a7b1-0cea-4b4d-a5f6-2d7f297c5cc5: Default # Default
+    beefb8bc-ba7d-4549-8654-ae7747827d79: Favourites # Favourites
+    c808a463-f182-4c58-bc31-a320a0f46ff8: Brands # Brands
+    d47a0322-1533-4116-85f1-933eeba5b17b: Default # Default
     e92e414f-7845-449e-8125-dad30e6a44a3: Common # Common
     f8d9a7b1-d152-4891-b80e-8f3af70f868b: FurnDeco # FurnDeco
 system:

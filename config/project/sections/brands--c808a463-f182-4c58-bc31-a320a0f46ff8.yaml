@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: brands
+name: Brands
+propagationMethod: all
+siteSettings:
+  f8d9a7b1-d152-4891-b80e-8f3af70f868b: # FurnDeco
+    enabledByDefault: true
+    hasUrls: true
+    template: brands/_entry
+    uriFormat: 'brands/{slug}'
+type: channel
