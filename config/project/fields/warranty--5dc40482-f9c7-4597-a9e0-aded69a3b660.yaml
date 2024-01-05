@@ -1,0 +1,20 @@
+columnSuffix: wuqgyycn
+contentColumnType: integer(10)
+fieldGroup: e92e414f-7845-449e-8125-dad30e6a44a3 # Common
+handle: warranty
+instructions: null
+name: Warranty
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

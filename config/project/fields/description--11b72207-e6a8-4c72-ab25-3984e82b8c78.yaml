@@ -1,0 +1,19 @@
+columnSuffix: puhhgkaq
+contentColumnType: text
+fieldGroup: e92e414f-7845-449e-8125-dad30e6a44a3 # Common
+handle: description
+instructions: null
+name: Description
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

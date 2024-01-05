@@ -1,4 +1,4 @@
-defaultPlacement: end
+defaultPlacement: beginning
 enableVersioning: true
 handle: brands
 name: Brands
@@ -9,4 +9,7 @@ siteSettings:
     hasUrls: true
     template: brands/_entry
     uriFormat: 'brands/{slug}'
-type: channel
+structure:
+  maxLevels: null
+  uid: cb102f8b-50cc-4a18-b589-ae3891301f90
+type: structure

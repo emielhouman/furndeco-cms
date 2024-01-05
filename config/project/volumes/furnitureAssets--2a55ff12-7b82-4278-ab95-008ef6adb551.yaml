@@ -1,5 +1,5 @@
 fieldLayouts:
-  57bcd682-7909-4e7d-a1c8-847b243fe7d8:
+  c85bd098-bf32-4465-9a73-5516e6bf92d4:
     tabs:
       -
         elementCondition: null
@@ -26,34 +26,42 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 6b416af7-48db-4a53-a96e-d953046c84a1
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: c4f6c27e-af73-4db8-b7f2-3b77bfd37076
             userCondition: null
             warning: null
             width: 100
           -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
             elementCondition: null
-            fieldUid: 5e2486e7-64b9-44ee-a0ff-6b505224f644 # Categories Image
+            id: null
             instructions: null
             label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
             required: false
+            rows: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d9825420-d439-4240-94f3-16cb49598238
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: c0ca83f4-c074-4eb1-897b-9de1b23e07b4
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 4096b096-30f7-42d4-999a-5d4ffc5b9ff4
+        uid: 70d6c1a9-d38e-4545-bab7-25f68464531f
         userCondition: null
-handle: default
-hasTitleField: true
-name: Default
-section: b94ad166-e8e8-45cb-9d11-0c58278fe6e6 # Categories
-showStatusField: true
-slugTranslationKeyFormat: null
-slugTranslationMethod: site
+fs: assets
+handle: furnitureAssets
+name: 'Furniture Assets'
 sortOrder: 1
-titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+transformFs: assets
+transformSubpath: ''

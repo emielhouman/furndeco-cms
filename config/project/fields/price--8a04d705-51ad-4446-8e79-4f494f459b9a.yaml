@@ -1,0 +1,17 @@
+columnSuffix: pygdnmni
+contentColumnType: integer(10)
+fieldGroup: e92e414f-7845-449e-8125-dad30e6a44a3 # Common
+handle: price
+instructions: null
+name: Price
+searchable: false
+settings:
+  currency: EUR
+  defaultValue: null
+  max: null
+  min: 0
+  showCurrency: true
+  size: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Money

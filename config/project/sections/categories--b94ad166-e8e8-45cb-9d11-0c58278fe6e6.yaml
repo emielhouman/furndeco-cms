@@ -1,4 +1,4 @@
-defaultPlacement: end
+defaultPlacement: beginning
 enableVersioning: true
 handle: categories
 name: Categories
@@ -9,4 +9,7 @@ siteSettings:
     hasUrls: true
     template: categories/_entry
     uriFormat: 'categories/{slug}'
-type: channel
+structure:
+  maxLevels: null
+  uid: ee8b2fed-7ba9-4d8e-862b-efa102b7746d
+type: structure
