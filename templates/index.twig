@@ -6,8 +6,24 @@
         <img class="hero__img" src="assets/image-1.png">
         <img class="hero__img--bg" src="assets/image-2.png">
         <div class="hero__content">
-          <p class="hero__title"><span class="hero__title--line">Experience</span> comfort &amp; elegance</p>
+          <h1 class="hero__title"><span class="hero__title--line">Experience</span> comfort &amp; elegance</h1>
           <a class="hero__cta" href="">View collection</a>
+        </div>
+      </section>
+      <section class="categories__section">
+        {% set categories = craft.entries().section('categories').all() %} 
+        <h2 class="categories__title">Categories</h2>
+        <div class="carousel">
+          <div class="carousel__content">
+            {% for category in categories %}
+              <div class="carousel__item">
+                <div class="item__content">
+                  <p class="item__title">{{category.title}}</p>
+                </div>
+                <img class="item__img" src="{{category.categoriesImage.one().url()}}">
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </section>
       
