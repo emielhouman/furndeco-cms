@@ -12,18 +12,46 @@
       </section>
       <section class="categories__section">
         {% set categories = craft.entries().section('categories').all() %} 
-        <h2 class="categories__title">Categories</h2>
-        <div class="carousel">
-          <div class="carousel__content">
+        <h2 class="categories__title">Our categories...</h2>
+        <div class="categories__carousel">
+          <div class="categories__items">
             {% for category in categories %}
-              <div class="carousel__item">
-                <div class="item__content">
-                  <p class="item__title">{{category.title}}</p>
-                </div>
+              <div class="categories__item">
+                <div class="item__content"><p>{{category.title}}</p></div>
                 <img class="item__img" src="{{category.categoriesImage.one().url()}}">
               </div>
             {% endfor %}
           </div>
+        </div>
+      </section>
+      <section class="spotlight__section">
+        <div class="spotlight__content">
+          <h2 class="spotlight__title">In the spotlight.</h2>
+          <div class="products__sorting">
+              <div class="sorting__select">
+                  <span>Most Popular</span>
+                  <img class="sorting__icon" src="assets/dropdown.svg">
+              </div>
+              <div class="sorting__options">
+                  <div class="sorting__option">Most Popular</div>
+                  <div class="sorting__option">Alphabetical</div>
+                  <div class="sorting__option">Price: low to high</div>
+                  <div class="sorting__option">Price: high to low</div>
+              </div>
+          </div>
+        </div>
+        {% set products = craft.entries().section('products').orderBy('RAND()').spotlight('1').all() %}
+        <div class="spotlight__items">
+        {% for product in products %}
+          <article class="spotlight__item">
+            <p class="item__brand">{{product.brand.one()}}</p>
+            <img class="item__img" src="{{product.productImage.one().url()}}">
+            <div class="item__content">
+              <h3 class="item__title">{{product.title}}</h3>
+              <p class="item__price">{{product.price}}</p>
+            </div>
+          </article>
+        {% endfor %}
         </div>
       </section>
       
