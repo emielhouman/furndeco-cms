@@ -10,8 +10,8 @@ settings:
   branchLimit: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
-  minRelations: null
+  maxRelations: 1
+  minRelations: 0
   selectionCondition:
     __assoc__:
       -
@@ -24,7 +24,7 @@ settings:
         - class
         - craft\elements\conditions\entries\EntryCondition
   selectionLabel: null
-  showSiteMenu: false
+  showSiteMenu: true
   sources:
     - 'section:b94ad166-e8e8-45cb-9d11-0c58278fe6e6' # Categories
   targetSiteId: null

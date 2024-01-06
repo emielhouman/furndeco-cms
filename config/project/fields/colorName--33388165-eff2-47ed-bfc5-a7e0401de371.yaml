@@ -1,13 +1,13 @@
-columnSuffix: pygdnmni
-contentColumnType: string(40)
+columnSuffix: cfucgyiu
+contentColumnType: string(100)
 fieldGroup: e92e414f-7845-449e-8125-dad30e6a44a3 # Common
-handle: price
+handle: colorName
 instructions: null
-name: Price
+name: 'Color Name'
 searchable: false
 settings:
   byteLimit: null
-  charLimit: 10
+  charLimit: 25
   code: false
   columnType: null
   initialRows: 4

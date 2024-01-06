@@ -24,7 +24,7 @@ settings:
         - class
         - craft\elements\conditions\entries\EntryCondition
   selectionLabel: null
-  showSiteMenu: false
+  showSiteMenu: true
   sources:
     - 'section:c808a463-f182-4c58-bc31-a320a0f46ff8' # Brands
   targetSiteId: null
