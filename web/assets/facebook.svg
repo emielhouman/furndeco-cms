@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m141.44,0H0v150h150V0h-8.56Zm-14.2,84.22h-20.72v54.95h-20.94v-54.95h-14.64v-19.82h14.64v-17.12c0-13.29,8.78-25.68,28.6-25.68,8.11,0,13.74.9,13.74.9l-.45,18.47h-12.61c-7.21,0-8.33,3.16-8.33,8.78v14.64h21.62l-.9,19.82Z"/>
+</svg>
