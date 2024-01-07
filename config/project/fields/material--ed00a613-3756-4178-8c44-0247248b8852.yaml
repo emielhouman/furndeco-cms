@@ -1,5 +1,5 @@
 columnSuffix: oxevzcjc
-contentColumnType: string(7)
+contentColumnType: string(15)
 fieldGroup: e92e414f-7845-449e-8125-dad30e6a44a3 # Common
 handle: material
 instructions: null
@@ -27,6 +27,28 @@ settings:
         -
           - value
           - leather
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Walnut Wood'
+        -
+          - value
+          - walnutVeneer
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Rubber Wood'
+        -
+          - value
+          - solidRubberWood
         -
           - default
           - ''
