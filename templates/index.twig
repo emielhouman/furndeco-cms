@@ -25,8 +25,11 @@
         </div>
       </section>
       <section class="spotlight__section">
-        <div class="spotlight__content">
-          <h2 class="spotlight__title">In the spotlight.</h2>
+        <div class="spotlight__wrapper">
+          <div class="spotlight__content">
+            <h2 class="spotlight__title">In the spotlight.</h2>
+            <p>Explore our bestselling products that earned a place in the spotlight.</p>
+          </div>
           <div class="products__sorting">
               <div class="sorting__select">
                   <span>Most Popular</span>
@@ -47,7 +50,7 @@
             <p class="item__brand">{{product.brand.one()}}</p>
             <img class="item__img" src="{{product.productImage.one().url()}}">
             <div class="item__content">
-              <h3 class="item__title">{{product.title}}</h3>
+              <h3 class="item__title">{{product.title|raw}}</h3>
               <p class="item__price">{{product.price}}</p>
             </div>
           </article>
