@@ -6,6 +6,7 @@
     <title>{{siteName}}</title>
     {% do craft.app.view.registerCssFile('@web/styles/reset.css') %}
     {% do craft.app.view.registerCssFile('@web/styles/style.css') %}
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <header>
@@ -28,8 +29,33 @@
 
     {% endblock %}
 
-    <footer>
-        <p>This is the footer.</p>
+    <footer class="footer">
+      <div class="footer__content">
+        <h2 class="footer__title">Let's get <span class="footer__title--line">in Touch.<span></h2>
+        <div class="footer__contacts">
+          <a href="mailto:info@furndeco.be">info@furndeco.be</a>
+          <a href="tel:015481802">015 48 18 02</a>
+          <a href="https://maps.app.goo.gl/AymLUxE2dkmTwd1L7" target="_blank">Raghenoplein 21 bis, 2800 Mechelen</a>
+        </div>
+        <div class="footer__navigation">
+          <a href="{{siteUrl}}">Home</a>
+          <a href="{{siteUrl}}about">Our Story</a>
+          <a href="{{siteUrl}}products">Collection</a>
+          <a href="{{siteUrl}}cart">Shopping Cart</a>
+        </div>
+      </div>
+      <div class="footer__info">
+        <div class="footer__docs">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer__socials">
+          <a href="#"><img class="socials__img" src="assets/facebook.svg"></a>
+          <a href="#"><img class="socials__img" src="assets/instagram.svg"></a>
+          <a href="#"><img class="socials__img" src="assets/pinterest.svg"></a>
+        </div>
+        <p class="footer__copyright">© 2024 FurnDeco. All rights reserved.</p>
+      </div>
     </footer>
     <script type="module" src="script.js"></script>
 </body>
