@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="0" y="0" width="150" height="150" transform="translate(150 150) rotate(-180)"/>
+  <polygon class="cls-2" points="84.53 36.45 93.52 45.47 64.48 75 93.52 104.53 84.53 113.55 46.49 75 84.53 36.45"/>
+</svg>

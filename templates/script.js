@@ -33,6 +33,25 @@
         });
     };
 
+    const scrollCategoriesItems = (direction) => {
+        const $leftButton = document.querySelector(`.categories__button.left`);
+        const $rightButton = document.querySelector(`.categories__button.right`);
+        const $scrollingCategories = document.querySelector(`.categories__select`);
+        const scrollValue = 1200;
+
+        if (direction === `right`) {
+            $scrollingCategories.scrollBy({ left: scrollValue, behavior: 'smooth' });
+        } else if (direction === `left`) {
+            $scrollingCategories.scrollBy({ left: -scrollValue, behavior: 'smooth' });
+        };
+
+        const startPosition = $scrollingCategories.scrollLeft === 0;
+        const endPosition = $scrollingCategories.scrollLeft + $scrollingCategories.clientWidth >= $scrollingCategories.scrollWidth;
+        
+        $leftButton.style.display = startPosition ? `block` : `none`;
+        $rightButton.style.display = endPosition ? `block` : `none`;
+    };
+
     const handleSortingMethod = (e) => {
         const $itemsContainer = document.querySelector('.products');
         const $items = Array.from($itemsContainer.querySelectorAll(`.product`));
@@ -78,12 +97,22 @@
     const init = () => {
         if (document.querySelector(`.categories__select`)) {
             const $categoriesItems = document.querySelectorAll(`.categories__item`);
+            const $leftButton = document.querySelector(`.categories__button.left`);
+            const $rightButton = document.querySelector(`.categories__button.right`);
 
             $categoriesItems.forEach($categoriesItem => {
-                $categoriesItem.addEventListener(`click`, e => {
+                $categoriesItem.addEventListener(`click`, () => {
                     const $selectedItem = $categoriesItem.querySelector(`.item__content`);
                     handleSelectedCategories($selectedItem);
                 });
+            });
+
+            $leftButton.addEventListener(`click`, () => {
+                scrollCategoriesItems(`left`);
+            });
+
+            $rightButton.addEventListener(`click`, () => {
+                scrollCategoriesItems(`right`);
             });
         };
 
@@ -92,7 +121,7 @@
             const $sortingDropdownIcon = document.querySelector(`.sorting__icon`);
             const $sortingOptions = document.querySelector(`.sorting__options`);
 
-            $sortingDropdown.addEventListener(`click`, e => {
+            $sortingDropdown.addEventListener(`click`, () => {
                 $sortingOptions.style.display = $sortingOptions.style.display === `block` ? `none` : `block`;
                 $sortingDropdownIcon.style.transform = $sortingDropdownIcon.style.transform === `scaleY(-1)` ? `scaleY(1)` : `scaleY(-1)`;
             });
