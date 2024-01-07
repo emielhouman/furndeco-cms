@@ -1,7 +1,41 @@
 {
+    let selectedCategories = [];
+
+    const handleSelectedCategories = ($selectedItem) => {
+        const $selectedItemTitle = $selectedItem.querySelector(`span`).textContent;
+
+        if (selectedCategories.includes($selectedItemTitle)) {
+            $selectedItem.style.backgroundColor = `rgba(0,0,0,.5)`;
+            const index = selectedCategories.indexOf($selectedItemTitle);
+            selectedCategories.splice(index, 1)
+        } else {
+            $selectedItem.style.backgroundColor = `rgba(0,0,0,.25)`;
+            selectedCategories.push($selectedItemTitle);
+        }
+        filterProducts();
+    };
+
+    const filterProducts = () => {
+        const $products = document.querySelectorAll(`.product`);
+
+        $products.forEach($product => {
+            $product.style.display = `none`;
+
+            if (selectedCategories.length === 0) {
+                $product.style.display = `block`;
+            } else {
+                for (let i = 0; i < selectedCategories.length; i++) {
+                    if ($product.hasAttribute(`data-` + selectedCategories[i])) {
+                        $product.style.display = `block`;
+                    };
+                };
+            };
+        });
+    };
+
     const handleSortingMethod = (e) => {
-        const $itemsContainer = document.querySelector('.spotlight__items');
-        const $items = Array.from($itemsContainer.querySelectorAll(`.spotlight__item`));
+        const $itemsContainer = document.querySelector('.products');
+        const $items = Array.from($itemsContainer.querySelectorAll(`.product`));
 
         if (e.target.textContent === `Most Popular`) {
             sortItemsRandom($itemsContainer, $items);
@@ -12,7 +46,7 @@
         } else if (e.target.textContent === `Price: high to low`) {
             sortItemsPrice($itemsContainer, $items, true);
         };
-    }
+    };
 
     const sortItemsRandom = (itemsContainer, items) => {
         items.sort(() => Math.random() - 0.5);
@@ -22,8 +56,8 @@
 
     const sortItemsAlphabetical = (itemsContainer, items) => {
         items.sort((a, b) => {
-            const $titleA = a.querySelector('.item__title').textContent.toLowerCase();
-            const $titleB = b.querySelector('.item__title').textContent.toLowerCase();
+            const $titleA = a.querySelector('.product__title').textContent.toLowerCase();
+            const $titleB = b.querySelector('.product__title').textContent.toLowerCase();
             return $titleA.localeCompare($titleB);
         });
 
@@ -32,19 +66,27 @@
 
     const sortItemsPrice = (itemsContainer, items, descending) => {
         items.sort((a, b) => {
-            const $priceA = parseFloat(a.querySelector('.item__price').textContent.replace(/[^\d.-]/g, ''));
-            const $priceB = parseFloat(b.querySelector('.item__price').textContent.replace(/[^\d.-]/g, ''));
-            if (descending) {
-                return $priceA - $priceB;
-            } else {
-                return $priceB - $priceA;
-            };
+            const $priceA = parseInt(a.querySelector(`.product__price`).textContent.replace(/[^\d.-]/g, '').replace('.', ''));
+            const $priceB = parseInt(b.querySelector(`.product__price`).textContent.replace(/[^\d.-]/g, '').replace('.', ''));
+
+            return descending ? $priceB - $priceA : $priceA - $priceB;
         });
 
         items.forEach(item => itemsContainer.appendChild(item));
     };
 
     const init = () => {
+        if (document.querySelector(`.categories__select`)) {
+            const $categoriesItems = document.querySelectorAll(`.categories__item`);
+
+            $categoriesItems.forEach($categoriesItem => {
+                $categoriesItem.addEventListener(`click`, e => {
+                    const $selectedItem = $categoriesItem.querySelector(`.item__content`);
+                    handleSelectedCategories($selectedItem);
+                });
+            });
+        };
+
         if (document.querySelector(`.products__sorting`)) {
             const $sortingDropdown = document.querySelector(`.sorting__select`);
             const $sortingDropdownIcon = document.querySelector(`.sorting__icon`);
@@ -58,9 +100,8 @@
             $sortingOptions.addEventListener(`click`, e => {
                 if (e.target.classList.contains(`sorting__option`)) {
                     handleSortingMethod(e);
-
-                    $sortingOptions.style.display = `none`;
                     $sortingDropdown.querySelector(`span`).textContent = e.target.textContent;
+                    $sortingOptions.style.display = `none`;
                     $sortingDropdownIcon.style.transform = `scaleY(1)`;
                 }
             });
