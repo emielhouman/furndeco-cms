@@ -36,6 +36,7 @@ a {
     z-index: 2;
     font-family: "DM Serif Display", serif;
     background-color: #fafafa;
+    box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,.25);
 }
 
 .navigation__content {
@@ -62,8 +63,7 @@ a {
     font-size: 1.35rem;
 }
 
-.menu__item--link {
-    text-decoration: none;
+.menu__item .link {
     color: black;
 }
 
@@ -141,14 +141,14 @@ a {
     font-size: 2.25rem;
 }
 
-.categories__carousel {
+.categories__select {
     margin-top: 2.5rem;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
 }
 
-.categories__carousel::-webkit-scrollbar {
+.categories__select::-webkit-scrollbar {
     display: none;
 }
 
@@ -180,6 +180,7 @@ a {
 }
 
 .categories__item .item__content:hover {
+    cursor: pointer;
     background-color: rgba(0,0,0,.25);
 }
 
@@ -256,27 +257,27 @@ a {
     background-color: #fafafa;
 }
 
-.spotlight__items {
+.products {
     margin-top: 3.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
 }
 
-.spotlight__item {
+.product {
     text-align: center;
     position: relative;
     border: .15rem solid transparent;
     transition: all .8s;
 }
 
-.spotlight__item:hover {
+.product:hover {
     padding: .85rem;
     cursor: pointer;
     border: .15rem solid rgba(0,0,0,.15);
 }
 
-.spotlight__item .item__brand {
+.product__brand {
     margin: 1rem;
     padding: .5rem;
     position: absolute;
@@ -288,32 +289,55 @@ a {
     text-transform: uppercase;
 }
 
-.spotlight__item .item__img {
+.product__img {
     width: 100%;
     height: auto;
 }
 
-.spotlight__item .item__content {
-    padding: 1rem 0 .5rem;
+.product__content {
+    padding: 1rem 0 .55rem;
     display: flex;
     flex-direction: column;
     gap: .85rem;
 }
 
-.spotlight__item .item__title{
+.product__title{
     font-size: 1.35rem;
     line-height: 1.35;
     letter-spacing: .03rem;
 }
 
-.spotlight__item .item__price {
+.product__price {
     color: rgba(0,0,0,.65);
 }
 
-.footer {
+.spotlight__button {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.spotlight__button a {
+    padding: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    color: black;
+    border: 0.15rem solid black;
+    transition: all .8s;
+}
+
+.spotlight__button a:hover {
     color: white;
     background-color: black;
+}
+
+.footer {
+    margin-top: 10rem;
     padding: 0 5rem;
+    background-color: black;
+    color: white;
+    box-shadow: 0 -.25rem 1rem 0 rgba(0,0,0,.5);
 }
 
 .footer__content {

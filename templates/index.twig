@@ -7,17 +7,17 @@
         <img class="hero__img--bg" src="assets/image-2.png">
         <div class="hero__content">
           <h1 class="hero__title"><span class="hero__title--line">Experience</span> comfort &amp; elegance</h1>
-          <a class="hero__cta" href="">View collection</a>
+          <a class="hero__cta" href="{{siteUrl}}products">View collection</a>
         </div>
       </section>
       <section class="categories__section">
         {% set categories = craft.entries().section('categories').all() %} 
         <h2 class="categories__title">Our categories...</h2>
-        <div class="categories__carousel">
+        <div class="categories__select">
           <div class="categories__items">
             {% for category in categories %}
               <div class="categories__item">
-                <div class="item__content"><p>{{category.title}}</p></div>
+                <div class="item__content"><span>{{category.title}}</span></div>
                 <img class="item__img" src="{{category.categoriesImage.one().url()}}">
               </div>
             {% endfor %}
@@ -43,18 +43,21 @@
               </div>
           </div>
         </div>
-        {% set products = craft.entries().section('products').orderBy('RAND()').spotlight('1').all() %}
-        <div class="spotlight__items">
+        {% set products = craft.entries().section('products').orderBy('RAND()').spotlight('1').limit(8).all() %}
+        <div class="products">
         {% for product in products %}
-          <article class="spotlight__item">
-            <p class="item__brand">{{product.brand.one()}}</p>
-            <img class="item__img" src="{{product.productImage.one().url()}}">
-            <div class="item__content">
-              <h3 class="item__title">{{product.title|raw}}</h3>
-              <p class="item__price">{{product.price}}</p>
+          <article class="product" data-{{product.category.one()}}>
+            <p class="product__brand">{{product.brand.one()}}</p>
+            <img class="product__img" src="{{product.productImage.one().url()}}">
+            <div class="product__content">
+              <h3 class="product__title">{{product.title|raw}}</h3>
+              <p class="product__price">{{product.price}}</p>
             </div>
           </article>
         {% endfor %}
+        </div>
+        <div class="spotlight__button">
+          <a href="{{siteUrl}}products">More Products</a>
         </div>
       </section>
       
