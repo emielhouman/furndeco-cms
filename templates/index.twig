@@ -12,7 +12,7 @@
       </section>
       <section class="categories__section">
         {% set categories = craft.entries().section('categories').all() %} 
-        <h2 class="categories__title">Our categories...</h2>
+        <h3 class="categories__title">Our categories...</h3>
         <div class="categories__select">
           <div class="categories__items">
             {% for category in categories %}
@@ -48,14 +48,16 @@
         {% set products = craft.entries().section('products').orderBy('RAND()').spotlight('1').limit(8).all() %}
         <div class="products">
         {% for product in products %}
-          <article class="product" data-{{product.category.one()}}>
-            <p class="product__brand">{{product.brand.one()}}</p>
-            <img class="product__img" src="{{product.productImage.one().url()}}">
-            <div class="product__content">
-              <h3 class="product__title">{{product.title|raw}}</h3>
-              <p class="product__price">{{product.price}}</p>
-            </div>
-          </article>
+          <a href="{{product.url}}">
+            <article class="product" data-{{product.category.one()}}>
+              <p class="product__brand">{{product.brand.one()}}</p>
+              <img class="product__img" src="{{product.productImage.one().url()}}">
+              <div class="product__content">
+                <h4 class="product__title">{{product.title|raw}}</h4>
+                <p class="product__price">{{product.price}}</p>
+              </div>
+            </article>
+          </a>
         {% endfor %}
         </div>
         <div class="spotlight__button">
