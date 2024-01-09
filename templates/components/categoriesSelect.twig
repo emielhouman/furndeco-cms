@@ -1,0 +1,10 @@
+<div class="categories__select">
+    <div class="categories__items">
+    {% for category in categories %}
+        <div class="categories__item">
+        <div class="item__content"><span>{{category.title}}</span></div>
+        <img class="item__img" src="{{category.categoriesImage.one().url()}}">
+        </div>
+    {% endfor %}
+    </div>
+</div>

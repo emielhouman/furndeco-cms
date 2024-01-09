@@ -13,16 +13,7 @@
       <section class="categories__section">
         {% set categories = craft.entries().section('categories').all() %} 
         <h3 class="categories__title">Our categories...</h3>
-        <div class="categories__select">
-          <div class="categories__items">
-            {% for category in categories %}
-              <div class="categories__item">
-                <div class="item__content"><span>{{category.title}}</span></div>
-                <img class="item__img" src="{{category.categoriesImage.one().url()}}">
-              </div>
-            {% endfor %}
-          </div>
-        </div>
+        {% include 'components/categoriesSelect.twig' %}
         <div class="categories__button left"><img src="assets/icons/left.svg"></div>
         <div class="categories__button right"><img src="assets/icons/right.svg"></div>
       </section>
@@ -32,34 +23,10 @@
             <h2 class="spotlight__title">In the spotlight.</h2>
             <p>Explore our bestselling products that earned a place in the spotlight.</p>
           </div>
-          <div class="products__sorting">
-              <div class="sorting__select">
-                  <span>Most Popular</span>
-                  <img class="sorting__icon" src="assets/icons/dropdown.svg">
-              </div>
-              <div class="sorting__options">
-                  <div class="sorting__option">Most Popular</div>
-                  <div class="sorting__option">Alphabetical</div>
-                  <div class="sorting__option">Price: low to high</div>
-                  <div class="sorting__option">Price: high to low</div>
-              </div>
-          </div>
+          {% include 'components/sortingSelect.twig' %}
         </div>
         {% set products = craft.entries().section('products').orderBy('RAND()').spotlight('1').limit(8).all() %}
-        <div class="products">
-        {% for product in products %}
-          <a href="{{product.url}}">
-            <article class="product" data-{{product.category.one()}}>
-              <p class="product__brand">{{product.brand.one()}}</p>
-              <img class="product__img" src="{{product.productImage.one().url()}}">
-              <div class="product__content">
-                <h4 class="product__title">{{product.title|raw}}</h4>
-                <p class="product__price">{{product.price}}</p>
-              </div>
-            </article>
-          </a>
-        {% endfor %}
-        </div>
+        {% include 'components/allProducts.twig' %}
         <div class="spotlight__button">
           <a href="{{siteUrl}}products">More Products</a>
         </div>
