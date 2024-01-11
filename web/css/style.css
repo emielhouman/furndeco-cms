@@ -618,6 +618,42 @@ a {
     color: #00a676;
 }
 
+.cart__section {
+    margin: 5rem;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+}
+
+.cart__items {
+    width: 65%;
+    padding: 0 2.5rem;
+}
+
+.cart__title {
+    font-size: 1.85rem;
+    margin-bottom: 2.5rem;
+}
+
+.cart__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cart__item img{
+    width: 12.5rem;
+    height: auto;
+}
+
+.checkout__overview {
+    width: 35%;
+    padding: 0 2.5rem;
+    border-left: .1rem solid rgba(0,0,0,.15);
+}
+
 .footer {
     margin-top: 10rem;
     padding: 0 5rem;
