@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{siteName}}</title>
-    {% do craft.app.view.registerCssFile('@web/styles/reset.css') %}
-    {% do craft.app.view.registerCssFile('@web/styles/style.css') %}
+    {% do craft.app.view.registerCssFile('@web/css/reset.css') %}
+    {% do craft.app.view.registerCssFile('@web/css/style.css') %}
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -57,6 +57,6 @@
         <p class="footer__copyright">© 2024 FurnDeco. All rights reserved.</p>
       </div>
     </footer>
-    <script type="module" src="../script.js"></script>
+    <script type="module" src="@web/script.js"></script>
 </body>
 </html>
