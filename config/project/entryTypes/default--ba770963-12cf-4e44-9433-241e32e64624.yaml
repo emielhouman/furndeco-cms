@@ -93,7 +93,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 4bc18763-998a-477d-affe-bbb58e662b9b # Color
+            fieldUid: 4bc18763-998a-477d-affe-bbb58e662b9b # Color Code
             instructions: null
             label: null
             required: false

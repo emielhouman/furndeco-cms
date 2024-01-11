@@ -1,4 +1,4 @@
-dateModified: 1704932472
+dateModified: 1704961953
 email:
   fromEmail: r1007021@student.thomasmore.be
   fromName: FurnDeco
@@ -14,22 +14,24 @@ fs:
 meta:
   __names__:
     2a55ff12-7b82-4278-ab95-008ef6adb551: 'Furniture Assets' # Furniture Assets
-    4bc18763-998a-477d-affe-bbb58e662b9b: Color # Color
+    4bc18763-998a-477d-affe-bbb58e662b9b: 'Color Code' # Color Code
     5b26135c-d2b4-4311-8214-eb3535d9e521: FurnDeco # FurnDeco
     5e2486e7-64b9-44ee-a0ff-6b505224f644: 'Categories Image' # Categories Image
     8a04d705-51ad-4446-8e79-4f494f459b9a: Price # Price
+    8b7ac29a-32cb-4625-9733-2c04d0856e12: 'Product Amount' # Product Amount
     8f061a1b-fb42-4a05-a034-195f03948d46: Brand # Brand
     9c4cb7e5-3ac4-4674-b03f-3eccbe1aae2c: Stock # Stock
     11b72207-e6a8-4c72-ab25-3984e82b8c78: Description # Description
     448a721b-ffa3-4368-87fd-2a9b0db05221: 'Product Image' # Product Image
     5575eddd-47fe-42b6-be90-7b8b19e89fe2: Default # Default
+    7664e39d-ffaa-4564-bd5b-e8177096d2c3: Product # Product
     33388165-eff2-47ed-bfc5-a7e0401de371: 'Color Name' # Color Name
     b8bcf4ef-f467-4195-8da0-d42ba9139777: Products # Products
     b94ad166-e8e8-45cb-9d11-0c58278fe6e6: Categories # Categories
     ba18eca6-70fe-4f7e-93f4-9e8ba392f07b: Spotlight # Spotlight
     ba770963-12cf-4e44-9433-241e32e64624: Default # Default
     bea7a7b1-0cea-4b4d-a5f6-2d7f297c5cc5: Default # Default
-    beefb8bc-ba7d-4549-8654-ae7747827d79: Favourites # Favourites
+    beefb8bc-ba7d-4549-8654-ae7747827d79: 'Cart Items' # Cart Items
     c8df1c73-fd26-4548-9c1a-6a49dd300168: 'Public Schema' # Public Schema
     c808a463-f182-4c58-bc31-a320a0f46ff8: Brands # Brands
     d47a0322-1533-4116-85f1-933eeba5b17b: Default # Default

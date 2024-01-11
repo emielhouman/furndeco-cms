@@ -1,9 +1,9 @@
 columnSuffix: rbpnspow
 contentColumnType: char(7)
 fieldGroup: e92e414f-7845-449e-8125-dad30e6a44a3 # Common
-handle: color
+handle: colorCode
 instructions: null
-name: Color
+name: 'Color Code'
 searchable: false
 settings:
   defaultColor: null
