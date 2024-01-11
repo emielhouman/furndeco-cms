@@ -1,14 +1,14 @@
 <div class="products">
     {% for product in products %}
-        <a href="{{product.url}}">
-        <article class="product" data-{{product.category.one()}}>
-            <p class="product__brand">{{product.brand.one()}}</p>
-            <img class="product__img" src="{{product.productImage.one().url()}}">
-            <div class="product__content">
-            <h4 class="product__title">{{product.title|raw}}</h4>
-            <p class="product__price">{{product.price}}</p>
-            </div>
+        <article class="product" data-title="{{product.title}}" data-category="{{product.category.one()}}">
+            <a class="product__url" href="{{product.url}}">
+                <p class="product__brand">{{product.brand.one()}}</p>
+                <img class="product__img" src="{{product.productImage.one().url()}}">
+                <div class="product__content">
+                    <h4 class="product__title">{{product.title}}</h4>
+                    <p class="product__price">{{product.price}}</p>
+                </div>
+            </a>
         </article>
-        </a>
     {% endfor %}
 </div>
