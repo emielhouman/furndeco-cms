@@ -30,4 +30,6 @@ return GeneralConfig::create()
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
     ])
+    // Overrides Craft CMS default CORS settings for GraphQL, allowing access from all origins
+    ->allowedGraphqlOrigins(false)
 ;
