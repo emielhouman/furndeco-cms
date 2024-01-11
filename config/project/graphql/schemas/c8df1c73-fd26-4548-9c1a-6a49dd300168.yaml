@@ -2,19 +2,15 @@ isPublic: true
 name: 'Public Schema'
 scope:
   - 'sites.f8d9a7b1-d152-4891-b80e-8f3af70f868b:read' # FurnDeco
-  - 'elements.drafts:read'
-  - 'elements.revisions:read'
-  - 'elements.inactive:read'
   - 'sections.c808a463-f182-4c58-bc31-a320a0f46ff8:read' # Brands
   - 'entrytypes.5575eddd-47fe-42b6-be90-7b8b19e89fe2:read' # Default
-  - 'sections.b94ad166-e8e8-45cb-9d11-0c58278fe6e6:read' # Categories
-  - 'entrytypes.bea7a7b1-0cea-4b4d-a5f6-2d7f297c5cc5:read' # Default
   - 'sections.beefb8bc-ba7d-4549-8654-ae7747827d79:read' # Cart Items
   - 'entrytypes.d47a0322-1533-4116-85f1-933eeba5b17b:read' # Default
+  - 'sections.b94ad166-e8e8-45cb-9d11-0c58278fe6e6:read' # Categories
+  - 'entrytypes.bea7a7b1-0cea-4b4d-a5f6-2d7f297c5cc5:read' # Default
   - 'sections.b8bcf4ef-f467-4195-8da0-d42ba9139777:read' # Products
   - 'entrytypes.ba770963-12cf-4e44-9433-241e32e64624:read' # Default
   - 'volumes.2a55ff12-7b82-4278-ab95-008ef6adb551:read' # Furniture Assets
-  - 'usergroups.everyone:read'
   - 'sections.beefb8bc-ba7d-4549-8654-ae7747827d79:edit' # Cart Items
   - 'entrytypes.d47a0322-1533-4116-85f1-933eeba5b17b:edit' # Default
   - 'entrytypes.d47a0322-1533-4116-85f1-933eeba5b17b:create' # Default

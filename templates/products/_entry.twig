@@ -3,22 +3,22 @@
     {% block content %}
 
     <section class="details__section">
-        <div class="detail__img">
+        <div class="details__img">
             <img src="{{entry.productImage.one().url()}}">
         </div>
-        <div class="detail__content">
-            <span class="detail__brand">{{entry.brand.one()}}</span>
-            <h4 class="detail__title">{{entry.title}}</h4>
-            <p class="detail__price">{{entry.price}}<span class="detail__price--info">Monthly payment plan is possible.</span></p>
-            <p class="detail__description">{{entry.description}}</p>
-            <div class="detail__color">
+        <div class="details__content">
+            <span class="details__brand">{{entry.brand.one()}}</span>
+            <h4 class="details__title">{{entry.title}}</h4>
+            <p class="details__price">{{entry.price}}<span class="details__price--info">Monthly payment plan is possible.</span></p>
+            <p class="details__description">{{entry.description}}</p>
+            <div class="details__color">
                 <span>{{entry.colorName}}</span>
                 <div class="color__rectangle">
                     <div class="color" style="background-color: {{entry.colorCode}}"></div>
                 </div>
             </div>
-            <button class="detail__button">Add to cart</button>
-            <div class="detail__stock">
+            <a href="{{siteUrl}}cart" class="details__button">Add to cart</a>
+            <div class="details__stock">
                 {% if entry.stock %}
                 <svg class="stock__icon stock" viewBox="0 0 150 135">
                     <path d="m2.05,83.96c9.1,36.08,46.03,58.06,82.31,49,36.27-9.05,58.36-45.78,49.26-81.88l-.03-.16c-.29-2.07-2.22-3.51-4.3-3.22-2.08.29-3.53,2.21-3.24,4.28.04.27.11.54.2.8l.05.16c8.08,32.04-11.57,64.65-43.81,72.69-32.24,8.05-65.05-11.48-73.13-43.53-3.92-15.55-1.53-31.68,6.74-45.41,8.27-13.73,21.43-23.44,37.07-27.34,17.39-4.34,35.66-.8,50.14,9.7l.13.1c.75.68,1.73,1.01,2.74.97,1.02-.05,1.95-.49,2.63-1.24.68-.75,1.03-1.72.98-2.73-.05-1.01-.49-1.94-1.25-2.62-.19-.17-.4-.33-.63-.46l-.13-.08C95.74,4.26,80.93-.35,66.1.02h0c-5,.13-9.98.8-14.79,2C15.04,11.08-7.06,47.83,2.05,83.96Z"/>

@@ -1,4 +1,4 @@
-dateModified: 1704961953
+dateModified: 1704981590
 email:
   fromEmail: r1007021@student.thomasmore.be
   fromName: FurnDeco
@@ -18,7 +18,6 @@ meta:
     5b26135c-d2b4-4311-8214-eb3535d9e521: FurnDeco # FurnDeco
     5e2486e7-64b9-44ee-a0ff-6b505224f644: 'Categories Image' # Categories Image
     8a04d705-51ad-4446-8e79-4f494f459b9a: Price # Price
-    8b7ac29a-32cb-4625-9733-2c04d0856e12: 'Product Amount' # Product Amount
     8f061a1b-fb42-4a05-a034-195f03948d46: Brand # Brand
     9c4cb7e5-3ac4-4674-b03f-3eccbe1aae2c: Stock # Stock
     11b72207-e6a8-4c72-ab25-3984e82b8c78: Description # Description

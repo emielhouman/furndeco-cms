@@ -133,13 +133,13 @@
     const init = () => {
         if (document.querySelector(`.products__search`)) {
             handleSearchInput();
-        }
+        };
         if (document.querySelector(`.categories__select`)) {
             handleCategoriesInput();
-        }
+        };
         if (document.querySelector(`.products__sorting`)) {
             handleSortingInput();
-        }
+        };
     };
 
     init();
