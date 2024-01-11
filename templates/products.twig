@@ -1,9 +1,23 @@
 {% extends "_layout" %}
 
-  {% block content %}
+    {% block content %}
 
-      <section>
-          <p>Products!</p>
-      </section>
+    <section class="categories__section">
+        {% set categories = craft.entries().section('categories').all() %} 
+        {% include 'components/categoriesSelect.twig' %}
+    </section>
+    <section class="collection__section">
+        <h2 class="collection__title">Explore our collection.</h2>
+        <p class="collection__text">Looking for a statement piece of furniture? Explore our collection to elevate your interior with comfort &amp; elegance!</p>
+        <div class="products__filters">
+            <div class="products__search">
+                <input class="search__input" type="text" placeholder="Search..." >
+                <button class="search__button" type="submit"><img src="assets/icons/search.svg"></button>
+            </div>
+            {% include 'components/sortingSelect.twig' %}
+        </div>
+        {% set products = craft.entries().section('products').orderBy('RAND()').all() %}
+        {% include 'components/allProducts.twig' %}
+    </section>
       
-  {% endblock %} 
+    {% endblock %} 
